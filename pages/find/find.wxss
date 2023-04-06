@@ -1,0 +1,92 @@
+/* pages/find/find.wxss */
+.main{
+  /* width: 100%; */
+  padding: 50rpx 50rpx;
+}
+.main .topbox{
+  background: #f1f1f1;
+  height: 100rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+.topbox input{
+  width: 500rpx;
+  height: 100rpx;
+  padding-left: 50rpx;
+  float: left;
+  color: #666666;
+}
+.topbox .btn{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  position: relative;
+  
+}
+.btn image{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.titlebox{
+  height: 100rpx;
+  /* background: yellowgreen; */
+
+}
+.titlebox .txt{
+  float: left;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.titlebox .txt_r{
+  float: right;
+  width: 140rpx;
+  height: 50rpx;
+  border: 1rpx solid #888888;
+  text-align: center;
+  color: #888888;
+  border-radius: 12rpx;
+  margin-top: 25rpx;
+  margin-right: 30rpx;
+  line-height: 50rpx;
+}
+/* 热门歌手 */
+
+.hotlist .hotitem{
+  width: 180rpx;
+  height: 240rpx;
+  float: left;
+  margin: 19rpx;
+
+}
+.hotlist .hotitem text{
+  color: #888888;
+  font-size: 26rpx;
+  width: 180rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+.hotlist .hotitem image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+/* 微元素来清除浮动解决高度塌陷 */
+.clearfix:after{
+  content: "";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+
+}

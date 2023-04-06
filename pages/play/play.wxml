@@ -1,0 +1,32 @@
+<!-- <text>播放页面</text> -->
+<view id="bg"><image class="bg" src="{{imgurl}}"></image>
+</view>
+<view class="name">{{name}}</view>
+<swiper class="main">
+<swiper-item class="item imgitem">
+  <image class="{{date=='play'? '':'clear'}}" src="{{imgurl}}"></image>
+</swiper-item>
+<swiper-item class="item txtbox">
+<!-- 滚动组件 -->
+<!-- scroll-top="{{top}}"  定位滚动条位置 -->
+<scroll-view class="txt_wrap" scroll-y='false' scroll-top='{{top}}'>
+<!--  wx:for-index='in'   当前遍历时候的下标 -->
+<view wx:for-index='in' wx:for="{{lrcList}}" class="{{in==index?'color':''}}">{{item[1]}}</view>
+</scroll-view>
+</swiper-item>
+</swiper>
+<!-- 进度条 -->
+<view class="timebox">
+<view class="play_time">{{playtime}}</view>
+<!-- max="{{max}}" max进度条最大值代表总距离  value代表当前的位置-->
+<slider bindchange="sliderchaneg" activeColor="#c20c0c" block-size="12" max="{{max}}" value="{{move}}"></slider>
+<view class="end_time">{{timelength}}</view>
+</view>
+<view class="btnBox">
+<image bindtap="changemode" src="/pages/images/{{mode=='loop'?'xunhuan.png':'shunxu.png'}}"></image>
+<image bindtap="prevSong" src="/pages/images/daotui1.png"></image>
+<image bindtap="playdate" src="/pages/images/{{date=='pause'? 'play1.png':'pause.png'}}"></image>
+<image bindtap="nextSong" src="/pages/images/kuaijin1.png"></image>
+</view>
+<!-- bindtimeupdate 播放时间更改时触发 -->
+<audio bindended="changeMusic" bindtimeupdate="timechange" action="{{action}}" src="https://music.163.com/song/media/outer/url?id={{musicId}}.mp3"></audio>

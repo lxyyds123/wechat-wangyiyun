@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/song/song",
+    "pages/my/my",
+    "pages/play/play",
+    "pages/find/find"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTitleText": "网抑云YY",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff0000",
+    "list": [{
+      "pagePath": "pages/song/song",
+      "text": "首页",
+      "iconPath": "pages/images/shouye1.png",
+      "selectedIconPath": "pages/images/shouye2.png" 
+     
+    }, {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "pages/images/faxian.png",
+      "selectedIconPath": "pages/images/faxian1.png"
+    }
+    
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

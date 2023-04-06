@@ -1,0 +1,36 @@
+<!--pages/song/song.wxml-->
+<!-- 轮播图 -->
+<swiper id="banner" indicator-dots="true" autoplay="true" interval="3000" circular="true" indicator-active-color="#c20c0c" indicator-color="#ffffff">
+<!-- wx:for="{{background}} 前端页面通过循环遍历渲染后台数据 -->
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <!-- <view class="swiper-item {{item}}">{{item}}</view> -->
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+</swiper>
+<!-- 搜索框 -->
+<view class="searchBox">
+<input placeholder="发现属于你的精彩" bindinput="keychange" class="txt" type="text"></input>
+<view class="btn">
+<image bindtap="search" src="/pages/images/search.png"></image>
+</view>
+</view>
+<!-- wx:for-index='i'  匹配当前下标 -->
+<block wx:for="{{musiclist}}" wx:key="*this" wx:for-index='i'>
+<view class="list_wrap">
+<view class="list_l">
+<image src="{{ImgUrl_list[i]}}"></image>
+</view>
+<view class="list_c">
+<view class="musicName">{{item.name}}</view>
+<view class="name">{{item.artists[0].name}}</view>
+</view>
+<!-- bandtap 单击事件 -->
+<view data-id="{{item.id}}" bindtap="play" class="list_r">
+<image src="/pages/images/bofang.png"></image>
+</view>
+</view>
+</block>
+
+

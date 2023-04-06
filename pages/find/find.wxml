@@ -1,0 +1,35 @@
+<!--pages/find/find.wxml-->
+<view class="main">
+<view class="topbox">
+<input placeholder="发现属于你的精彩" type="text" class="txt"></input>
+<view class="btn">
+<image src="/pages/images/search.png"></image>
+</view>
+</view>
+<view class="titlebox">
+<view class="txt">歌手推荐</view>
+<view class="txt_r" bindtap="changehot">更多></view>
+</view>
+<view class="hotlist clearfix">
+<block wx:for="{{hotlist}}">
+<view class="hotitem">
+<image src="{{item.picUrl}}"></image>
+<text>{{item.name}}</text>
+</view>
+</block>
+</view>
+
+<view class="titlebox">
+<view class="txt">专辑推荐</view>
+<view class="txt_r" bindtap="changeNew">更多></view>
+</view>
+<!-- 专辑推荐 -->
+<view class="hotlist clearfix">
+<block wx:for="{{newlist}}">
+<view class="hotitem">
+<image src="{{item.picUrl}}"></image>
+<text>{{item.name}}</text>
+</view>
+</block>
+</view>
+</view>
